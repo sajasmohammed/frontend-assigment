@@ -1,5 +1,4 @@
 import React, { Fragment, useContext } from 'react'
-import { Link } from 'react-router-dom';
 import Gallery from './gallery';
 import "./css/home.css";
 import './css/loader.css';
