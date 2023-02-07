@@ -3,12 +3,12 @@ import { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import './css/home.css'
 
-export default function Gallery({ props }) {
+export default function Gallery({ data, i }) {
     return (
         <Fragment>
-            <div class="grid-item">
-                <Link to={`/user/${props.phone}`}>
-                    <img src={props.picture.thumbnail} className="App-logo" alt="logo" />
+            <div className="grid-item" key={i}>
+                <Link to={`/user/${data.phone}`}>
+                    <img src={data.picture.thumbnail} className="App-logo" alt="logo" />
                 </Link>
             </div>
         </Fragment>

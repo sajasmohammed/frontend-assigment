@@ -4,21 +4,22 @@ import { Link } from 'react-router-dom'
 import './css/user_details.css';
 import './css/loader.css'
 
-export default function UserDetails() {
+export default function UserGenerate() {
 
   const [user, setUser] = useState([]);
   const [isLoading, setLoading] = useState(true)
 
-
-  // const {id}=useParams()
   const fetchUserDetail = async () => {
-    const res = await axios.get('https://randomuser.me/api/');
-    setUser(res.data['results']);
-    setLoading(false);
+    const res = await axios.get('https://randomuser.me/api/?results=1');
+    console.log(res.data['results']);
+    // setUser(res.data['results']);
+    // setLoading(false);
   }
+
   useEffect(() => {
     fetchUserDetail();
-  }, [])
+  }, []);
+
   if (isLoading) {
     return (
       <div className='loaderParent'>
