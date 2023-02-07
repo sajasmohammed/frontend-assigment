@@ -1,9 +1,8 @@
 import axios from 'axios';
 import React, { Fragment, useEffect, useState } from 'react'
-import { Link, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Gallery from './gallery';
 import "./home.css";
-import UserDetails from './user_details';
 
 export default function Home() {
     const [image, setImage] = useState([]);

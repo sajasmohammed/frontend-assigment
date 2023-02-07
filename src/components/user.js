@@ -1,5 +1,4 @@
-import axios from 'axios';
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { Fragment } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import './user_details.css';
 
