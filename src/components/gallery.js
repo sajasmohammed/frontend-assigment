@@ -1,7 +1,7 @@
 import React from 'react'
 import { Fragment } from 'react'
 import { Link } from 'react-router-dom'
-import './home.css'
+import './css/home.css'
 
 export default function Gallery({ props }) {
     return (

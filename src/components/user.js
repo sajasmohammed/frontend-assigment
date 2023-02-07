@@ -1,9 +1,11 @@
 import React, { Fragment } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import './user_details.css';
+import './css/user_details.css';
+import './css/loader.css'
+
 
 export default function User() {
-
+    
     const { item } = useParams();
     console.log(item);
 
