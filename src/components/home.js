@@ -20,6 +20,7 @@ export default function Home() {
     }
 
     const filterGents = async () => {
+        setLoading(true);
         const res = await axios.get('https://randomuser.me/api/?results=560');
         const data = res.data['results'].filter((value) => {
             return value.gender === "male";
@@ -29,6 +30,7 @@ export default function Home() {
         setLoading(false);
     }
     const filterLadies = async () => {
+        setLoading(true);
         const res = await axios.get('https://randomuser.me/api/?results=560');
         const data = res.data['results'].filter((value) => {
             return value.gender === "female";
@@ -39,7 +41,11 @@ export default function Home() {
     }
 
     if (isLoading) {
-        return <h1>Loading...</h1>
+        return (
+            <div className='loaderParent'>
+                <div className="loader"></div>
+            </div>
+        )
     }
     return (
 
@@ -62,7 +68,7 @@ export default function Home() {
                 <div className='gallery'>
                     {
                         image.map((item) => (
-                           <Gallery props={item}/>
+                            <Gallery props={item} />
                         ))
                     }
                 </div>
