@@ -13,16 +13,17 @@ function App() {
   const [filteredImage, setfilteredImage] = useState([]);
 
   useEffect(() => {
+    const fetchApi = async () => {
+      const res = await axios.get(`https://randomuser.me/api/?results=${user}`);
+      setImage(res.data['results']);
+      setCountFaces(res.data['results'].length)
+      setLoading(false);
+    }
     fetchApi();
   }, [user]);
 
 
-  const fetchApi = async () => {
-    const res = await axios.get(`https://randomuser.me/api/?results=${user}`);
-    setImage(res.data['results']);
-    setCountFaces(res.data['results'].length)
-    setLoading(false);
-  }
+
 
   return (
     <UserContext.Provider value={{ image, setImage, filteredImage, setfilteredImage, user, setUser, countFaces, setCountFaces, isLoading, setLoading }}>
