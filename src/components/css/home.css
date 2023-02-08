@@ -22,8 +22,9 @@ button:hover {
 }
 
 button:active {
-    background-color: #2D80F8;
+    background-color: #FFFFFF;
 }
+
 
 
 
@@ -47,6 +48,7 @@ button:active {
     font-size: 25px;
     color: #7C8090;
 }
+
 .main {
     margin-top: 22px;
 }
@@ -67,11 +69,48 @@ button:active {
     height: 38px;
     left: 0px;
     top: 0px;
-    background: #E4EFFF;
+    background: #FFFFFF;
     border: 1px solid #2D80F8;
     border-radius: 23px;
     margin-left: 11px;
 }
+
+.outline-btn1 {
+    box-sizing: border-box;
+    position: relative;
+    width: 90px;
+    height: 38px;
+    left: 0px;
+    top: 0px;
+    background: #FFFFFF;
+    border: 1px solid #2D80F8;
+    border-radius: 23px;
+    margin-left: 11px;
+}
+
+.outline-btn2 {
+    box-sizing: border-box;
+    position: relative;
+    width: 90px;
+    height: 38px;
+    left: 0px;
+    top: 0px;
+    background: #FFFFFF;
+    border: 1px solid #2D80F8;
+    border-radius: 23px;
+    margin-left: 11px;
+}
+
+.outline-btn.active {
+    background-color: #E4EFFF;
+}
+.outline-btn1.active {
+    background-color: #E4EFFF;
+}
+.outline-btn2.active {
+    background-color: #E4EFFF;
+}
+
 
 .grid-container {
     margin-top: 40px;
@@ -85,7 +124,7 @@ button:active {
     height: 140px;
 }
 
-img:hover{
+img:hover {
     border: 2px solid #2D80F8;
     opacity: 0.8;
 }
@@ -94,15 +133,19 @@ img:hover{
     body {
         margin: 10px;
     }
-    .body-text{
+
+    .body-text {
         font-size: 15px;
     }
-    .body-text1{
+
+    .body-text1 {
         display: none;
     }
-    .button{
+
+    .button {
         width: 130px;
     }
+
     .grid-container {
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 0px;
@@ -112,5 +155,5 @@ img:hover{
         width: 100px;
         height: 100px;
     }
-    
+
 }

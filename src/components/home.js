@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from 'react'
+import React, { Fragment, useContext, useState } from 'react'
 import Gallery from './gallery';
 import "./css/home.css";
 import './css/loader.css';
@@ -8,18 +8,24 @@ import { UserContext } from '../context/usercontext';
 export default function Home() {
 
     const { image, filteredImage, setfilteredImage, user, setUser, countFaces, setCountFaces, isLoading, setLoading } = useContext(UserContext);
+    const [active, setActive] = useState(true);
+    const [active1, setActive1] = useState(false);
+    const [active2, setActive2] = useState(false);
 
-   
     const getAllImages = () => {
         setLoading(true);
         const data = image.filter((value) => {
             return value.gender === "female" || value.gender === "male";
         });
         setfilteredImage(data);
-        setCountFaces(image.length)
+        setCountFaces(image.length);
         setLoading(false);
+
+        setActive(true);
+        setActive1(false);
+        setActive2(false);
     }
-    
+
     const filterGents = () => {
         setLoading(true);
         const data = image.filter((value) => {
@@ -28,8 +34,11 @@ export default function Home() {
 
         setfilteredImage(data);
         setCountFaces(data.length);
-
         setLoading(false);
+
+        setActive(false);
+        setActive1(true);
+        setActive2(false);
     }
     const filterLadies = () => {
         setLoading(true);
@@ -37,8 +46,12 @@ export default function Home() {
             return value.gender === "female";
         });
         setfilteredImage(data);
-        setCountFaces(data.length)
+        setCountFaces(data.length);
         setLoading(false);
+
+        setActive(false);
+        setActive1(false);
+        setActive2(true);
     }
 
     if (isLoading) {
@@ -59,9 +72,9 @@ export default function Home() {
                     <div className='body-text'>{countFaces}  new faces</div>
                     <div className='show-btn'>
                         <div className='body-text1'>Show :</div>
-                        <button className='outline-btn' onClick={() => getAllImages()}>ALL</button>
-                        <button className='outline-btn' onClick={() => filterGents()}>GENTS</button>
-                        <button className='outline-btn' onClick={() => filterLadies()}>LADIES</button>
+                        <button className={`outline-btn ${active ? 'active' : ''}`} onClick={() => getAllImages()}>ALL</button>
+                        <button className={`outline-btn1 ${active1 ? 'active' : ''}`} onClick={() => filterGents()}>GENTS</button>
+                        <button className={`outline-btn2 ${active2 ? 'active' : ''}`} onClick={() => filterLadies()}>LADIES</button>
                     </div>
                 </div>
                 <div className='grid-container'>
