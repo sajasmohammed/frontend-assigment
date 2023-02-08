@@ -16,7 +16,7 @@
 }
 
 .avatar {
-    margin-left: 100px;
+    margin-left: 150px;
     margin-top: -200px;
     width: 340px;
     height: 340px;
@@ -33,6 +33,14 @@ h1 {
     flex-direction: row;
 }
 .contact-info{
-    margin-right: 40px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+}
+.icon{
+    margin-right: 10px;
 }
 
+.text{
+    font-size: 20px;
+}

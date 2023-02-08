@@ -65,7 +65,7 @@ export default function Home() {
         <Fragment>
             <div className='container'>
                 <header className="header">
-                    <img src="./asset/logo.png" width="181" height="50" alt="logo" />
+                    <img src="../asset/logo.png" width="181" height="50" alt="logo" />
                     <button className='button' onClick={() => setUser(user + 1)}> GENERATE NEW USERS </button>
                 </header>
                 <main className='main'>

@@ -21,7 +21,7 @@ export default function User() {
     return (
         <Fragment>
             <header className="headers">
-                <img src="./asset/logo.png" width="181" height="50" alt="logo" />
+                <img src="../asset/logo.png" width="181" height="50" alt="logo" />
                 <Link to='/'><button className='outline-btn1'>  Back </button></Link>
             </header>
             <main className='body'>
@@ -31,16 +31,16 @@ export default function User() {
 
                     <div className='contact'>
                         <div className='contact-info'>
-                            <img src="./asset/email.png" alt="logo" />
-                            {data.email}
+                            <img src="../asset/email.png" className='icon' alt="logo" />
+                            <div className='text'>{data.email}</div>
                         </div>
                         <div className='contact-info'>
-                            <img src="./asset/location.png" alt="logo" />
-                            {data.country}
+                            <img src="../asset/location.png" className='icon' alt="logo" />
+                            <div className='text'>{data.country}</div>
                         </div>
                         <div className='contact-info'>
-                            <img src="./asset/location.png" alt="logo" />
-                            {data.phone}
+                            <img src="../asset/location.png" className='icon' alt="logo" />
+                            <div className='text'>{data.phone}</div>
                         </div>
                     </div>
                 </div>
