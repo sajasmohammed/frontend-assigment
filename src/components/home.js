@@ -1,4 +1,4 @@
-import React, { Fragment, useContext, useEffect } from 'react'
+import React, { Fragment, useContext } from 'react'
 import Gallery from './gallery';
 import "./css/home.css";
 import './css/loader.css';
@@ -9,10 +9,8 @@ export default function Home() {
 
     const { image, filteredImage, setfilteredImage, user, setUser, countFaces, setCountFaces, isLoading, setLoading } = useContext(UserContext);
 
-    useEffect(()=>{
-        getAllImages();
-    }, [image])
-    const getAllImages = async () => {
+   
+    const getAllImages = () => {
         setLoading(true);
         const data = image.filter((value) => {
             return value.gender === "female" || value.gender === "male";
@@ -21,7 +19,8 @@ export default function Home() {
         setCountFaces(image.length)
         setLoading(false);
     }
-    const filterGents = async () => {
+    
+    const filterGents = () => {
         setLoading(true);
         const data = image.filter((value) => {
             return value.gender === "male";
@@ -52,24 +51,23 @@ export default function Home() {
     return (
         <Fragment>
             <header className="header">
-                <img src="./asset/logo.png" className="App-logo" alt="logo" />
+                <img src="./asset/logo.png" width="181" height="50" alt="logo" />
                 <button className='button' onClick={() => setUser(user + 1)}> GENERATE NEW USERS </button>
             </header>
-            <div className='line'></div>
-            <main>
+            <main className='main'>
                 <div className='sub-menu'>
                     <div className='body-text'>{countFaces}  new faces</div>
                     <div className='show-btn'>
-                        <div className='body-text'>Show :</div>
+                        <div className='body-text1'>Show :</div>
                         <button className='outline-btn' onClick={() => getAllImages()}>ALL</button>
-                        <button className='outline-btn2' onClick={() => filterGents()}>GENTS</button>
-                        <button className='outline-btn2' onClick={() => filterLadies()}>LADIES</button>
+                        <button className='outline-btn' onClick={() => filterGents()}>GENTS</button>
+                        <button className='outline-btn' onClick={() => filterLadies()}>LADIES</button>
                     </div>
                 </div>
-                <div className='gallery'>
+                <div className='grid-container'>
                     {
                         filteredImage.map((item, index) => (
-                            <Gallery data={item} i={index} />
+                            <Gallery data={item} i={index + 1} />
                         ))
                     }
                 </div>

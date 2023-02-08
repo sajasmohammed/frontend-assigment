@@ -1,14 +1,11 @@
 import React, { Fragment } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './css/user_details.css';
 import './css/loader.css'
 
 
 export default function User() {
     
-    const { item } = useParams();
-    console.log(item);
-
     return (
         <Fragment>
             <header className="header">
@@ -28,9 +25,10 @@ export default function User() {
                             <img src="./asset/location.png" alt="logo" />  <div className='contact-info'>
                                 {item.location.country}
                             </div> */}
-                        <img src="./asset/phone.png" alt="logo" /><div className='contact-info'>
+                        {/* <img src={props} alt="logo" /> */}
+                        {/* <div className='contact-info'>
                             {item}
-                        </div>
+                        </div> */}
                         {/* </div> */}
                     </div>
                 }
