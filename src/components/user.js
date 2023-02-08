@@ -21,7 +21,7 @@ export default function User() {
     return (
         <Fragment>
             <header className="headers">
-                <img src="../asset/logo.png" width="181" height="50" alt="logo" />
+                <img src="../asset/logo.png" className='logo' alt="logo" />
                 <Link to='/'><button className='outline-btn1'>  Back </button></Link>
             </header>
             <main className='body'>

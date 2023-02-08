@@ -3,6 +3,7 @@
     margin-left: 50px;
     margin-right: 50px;
 }
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -26,7 +27,10 @@ button:active {
 }
 
 
-
+.logo {
+    width: 181px;
+    height: 50px;
+}
 
 .body-text {
     width: auto;
@@ -104,9 +108,11 @@ button:active {
 .outline-btn.active {
     background-color: #E4EFFF;
 }
+
 .outline-btn1.active {
     background-color: #E4EFFF;
 }
+
 .outline-btn2.active {
     background-color: #E4EFFF;
 }
@@ -129,11 +135,15 @@ img:hover {
     opacity: 0.8;
 }
 
+
 @media screen and (max-width: 476px) {
     body {
         margin: 10px;
     }
-
+    .logo{
+        width:100px; 
+        height:50px;
+    }
     .body-text {
         font-size: 15px;
     }
@@ -143,7 +153,7 @@ img:hover {
     }
 
     .button {
-        width: 130px;
+        width: 150px;
     }
 
     .grid-container {
