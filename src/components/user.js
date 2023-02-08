@@ -6,19 +6,17 @@ import { UserContext } from '../context/usercontext';
 
 export default function User() {
 
-    const id = useParams();
+    var id = useParams();
     const { filteredImage } = useContext(UserContext);
     const [data, setData] = useState({ first: "", last: "", pic: "", email: "", country: "", phone: "" });
-    const filterData = async () => {
-        let res = await filteredImage.find((item) => {
+
+    useEffect(() => {
+        let res = filteredImage.find((item) => {
             return item.login.uuid === id.item ? item : "";
         });
         setData({ first: res.name.first, last: res.name.last, pic: res.picture.thumbnail, email: res.email, country: res.location.country, phone: res.phone });
-    }
 
-    useEffect(() => {
-        filterData();
-    }, [])
+    }, [filteredImage, id])
 
     return (
         <Fragment>
