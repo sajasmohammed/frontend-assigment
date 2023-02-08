@@ -3,14 +3,13 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/home";
 import User from "./components/user";
-import UserGenerate from "./components/user_generate";
 import { UserContext } from "./context/usercontext";
 
 function App() {
   const [image, setImage] = useState([]);
   const [isLoading, setLoading] = useState(true)
   const [countFaces, setCountFaces] = useState(0);
-  const [user, setUser] = useState(0);
+  const [user, setUser] = useState(560);
   const [filteredImage, setfilteredImage] = useState([]);
 
   useEffect(() => {
@@ -30,7 +29,6 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/user-generate" element={<UserGenerate />} />
           <Route path="/user/:item" element={<User />} />
         </Routes>
       </Router>
