@@ -76,15 +76,18 @@ button:active {
 .grid-container {
     margin-top: 40px;
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     grid-gap: 0px;
 }
 
 .grid-container img {
     width: 140px;
     height: 140px;
-    padding: 10px;
-    padding-bottom: 10px;
+}
+
+img:hover{
+    border: 2px solid #2D80F8;
+    opacity: 0.8;
 }
 
 @media screen and (max-width: 476px) {
