@@ -20,26 +20,31 @@ export default function User() {
 
     return (
         <Fragment>
-            <header className="header">
-                <img src="./asset/logo.png" className="App-logo" alt="logo" />
+            <header className="headers">
+                <img src="./asset/logo.png" width="181" height="50" alt="logo" />
                 <Link to='/'><button className='outline-btn1'>  Back </button></Link>
             </header>
             <main className='body'>
                 <div className='profile'>
                     <img src={data.pic} className="avatar" alt="logo" />
                     <h1>{data.first ?? ""} {data.last ?? ""}</h1>
-                    <div className='contact-detail'>
-                        <img src="./asset/email.png" alt="logo" /> <div className='contact-info'>
+
+                    <div className='contact'>
+                        <div className='contact-info'>
+                            <img src="./asset/email.png" alt="logo" />
                             {data.email}
                         </div>
-                        <img src="./asset/location.png" alt="logo" />  <div className='contact-info'>
+                        <div className='contact-info'>
+                            <img src="./asset/location.png" alt="logo" />
                             {data.country}
                         </div>
                         <div className='contact-info'>
+                            <img src="./asset/location.png" alt="logo" />
                             {data.phone}
                         </div>
                     </div>
                 </div>
+
             </main>
         </Fragment>
     )

@@ -1,26 +1,38 @@
-.profile {}
-
-.avatar {
-    width: 300px;
+.headers {
+    display: flex;
+    justify-content: space-between;
     height: 300px;
-    left: 570px;
-    top: 151px;
-    border-radius: 150px;
-    margin: 20px;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .body {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    top: 314px;
     background: #E4EFFF;
+    height: 550px;
 }
 
-.contact-detail{
-    width: 300px;
+.avatar {
+    margin-left: 100px;
+    margin-top: -200px;
+    width: 340px;
+    height: 340px;
+    border: 20px solid #C4D5EF;
+    border-radius: 190px;
 }
 
-.contact-info{
+h1 {
+    text-align: center;
+}
+
+.contact {
     display: flex;
+    flex-direction: row;
 }
+.contact-info{
+    margin-right: 40px;
+}
+

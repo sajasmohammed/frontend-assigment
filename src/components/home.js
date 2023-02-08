@@ -63,32 +63,35 @@ export default function Home() {
     }
     return (
         <Fragment>
-            <header className="header">
-                <img src="./asset/logo.png" width="181" height="50" alt="logo" />
-                <button className='button' onClick={() => setUser(user + 1)}> GENERATE NEW USERS </button>
-            </header>
-            <main className='main'>
-                <div className='sub-menu'>
-                    <div className='body-text'>{countFaces}  new faces</div>
-                    <div className='show-btn'>
-                        <div className='body-text1'>Show :</div>
-                        <button className={`outline-btn ${active ? 'active' : ''}`} onClick={() => getAllImages()}>ALL</button>
-                        <button className={`outline-btn1 ${active1 ? 'active' : ''}`} onClick={() => filterGents()}>GENTS</button>
-                        <button className={`outline-btn2 ${active2 ? 'active' : ''}`} onClick={() => filterLadies()}>LADIES</button>
+            <div className='container'>
+                <header className="header">
+                    <img src="./asset/logo.png" width="181" height="50" alt="logo" />
+                    <button className='button' onClick={() => setUser(user + 1)}> GENERATE NEW USERS </button>
+                </header>
+                <main className='main'>
+                    <div className='sub-menu'>
+                        <div className='body-text'>{countFaces}  new faces</div>
+                        <div className='show-btn'>
+                            <div className='body-text1'>Show :</div>
+                            <button className={`outline-btn ${active ? 'active' : ''}`} onClick={() => getAllImages()}>ALL</button>
+                            <button className={`outline-btn1 ${active1 ? 'active' : ''}`} onClick={() => filterGents()}>GENTS</button>
+                            <button className={`outline-btn2 ${active2 ? 'active' : ''}`} onClick={() => filterLadies()}>LADIES</button>
+                        </div>
                     </div>
-                </div>
-                <div className='grid-container'>
-                    {
-                        filteredImage.map((item, index) => (
-                            <div className="grid-item" key={index}>
-                                <Link to={`/user/${item.login.uuid}`}>
-                                    <img src={item.picture.thumbnail} className="App-logo" alt="logo" />
-                                </Link>
-                            </div>
-                        ))
-                    }
-                </div>
-            </main>
+                    <div className='grid-container'>
+                        {
+                            filteredImage.map((item, index) => (
+                                <div className="grid-item" key={index}>
+                                    <Link to={`/user/${item.login.uuid}`}>
+                                        <img src={item.picture.thumbnail} className="App-logo" alt="logo" />
+                                    </Link>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </main>
+
+            </div>
         </Fragment>
     )
 }
