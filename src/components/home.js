@@ -1,8 +1,8 @@
-import React, { Fragment, useContext, useState } from 'react'
-import Gallery from './gallery';
+import React, { Fragment, useContext, useState } from 'react';
 import "./css/home.css";
 import './css/loader.css';
 import { UserContext } from '../context/usercontext';
+import { Link } from 'react-router-dom';
 
 
 export default function Home() {
@@ -80,7 +80,11 @@ export default function Home() {
                 <div className='grid-container'>
                     {
                         filteredImage.map((item, index) => (
-                            <Gallery data={item} i={index + 1} />
+                            <div className="grid-item" key={index}>
+                                <Link to={`/user/${item.login.uuid}`}>
+                                    <img src={item.picture.thumbnail} className="App-logo" alt="logo" />
+                                </Link>
+                            </div>
                         ))
                     }
                 </div>
