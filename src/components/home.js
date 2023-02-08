@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from 'react'
+import React, { Fragment, useContext, useEffect } from 'react'
 import Gallery from './gallery';
 import "./css/home.css";
 import './css/loader.css';
@@ -9,7 +9,9 @@ export default function Home() {
 
     const { image, filteredImage, setfilteredImage, user, setUser, countFaces, setCountFaces, isLoading, setLoading } = useContext(UserContext);
 
-
+    useEffect(()=>{
+        getAllImages();
+    }, [image])
     const getAllImages = async () => {
         setLoading(true);
         const data = image.filter((value) => {
