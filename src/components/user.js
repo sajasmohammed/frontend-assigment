@@ -26,7 +26,9 @@ export default function User() {
             </header>
             <main className='body'>
                 <div className='profile'>
-                    <img src={data.pic} className="avatar" alt="logo" />
+                    <div className='profile-img'>
+                        <img src={data.pic} className="avatar" alt="logo" />
+                    </div>
                     <h1>{data.first ?? ""} {data.last ?? ""}</h1>
 
                     <div className='contact'>
@@ -39,7 +41,7 @@ export default function User() {
                             <div className='text'>{data.country}</div>
                         </div>
                         <div className='contact-info'>
-                            <img src="../asset/location.png" className='icon' alt="logo" />
+                            <img src="../asset/phone.png" className='icon' alt="logo" />
                             <div className='text'>{data.phone}</div>
                         </div>
                     </div>
