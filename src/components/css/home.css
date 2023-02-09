@@ -117,14 +117,12 @@ button:active {
     background-color: #E4EFFF;
 }
 
-
 .grid-container {
     margin-top: 40px;
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-gap: 0px;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;   
 }
-
 .grid-container img {
     width: 140px;
     height: 140px;
@@ -137,12 +135,21 @@ img:hover {
 
 
 @media screen and (max-width: 476px) {
-    body {
+    .header{
+        width: 320px;
+    }
+    .sub-menu{
+        width: 320px;
+    }
+    .container{
         margin: 10px;
     }
+    body {
+        margin: 0px;
+    }
     .logo{
-        width:100px; 
-        height:50px;
+        width:10px; 
+        height:10px;
     }
     .body-text {
         font-size: 15px;
@@ -153,12 +160,26 @@ img:hover {
     }
 
     .button {
-        width: 150px;
+        width: 100px;
+    }
+    .outline-btn{
+        width: 70px;
+        height: 30px;
+    }
+    .outline-btn1{
+        width: 70px;
+        height: 30px;
+    }
+    .outline-btn2{
+        width: 70px;
+        height: 30px;
     }
 
     .grid-container {
+        margin-top: 10px;
         grid-template-columns: repeat(3, 1fr);
-        grid-gap: 0px;
+        row-gap: 10px;
+        column-gap: 0px;
     }
 
     .grid-container img {

@@ -22,8 +22,8 @@
 }
 .avatar {
     margin-top: -200px;
-    width: 340px;
-    height: 340px;
+    width: 300px;
+    height: 300px;
     border: 20px solid #C4D5EF;
     border-radius: 190px;
 }
@@ -57,12 +57,13 @@ h1 {
 
 
 @media screen and (max-width: 476px) {
-   
+    .headers{
+        height: 200px;
+    }
     .avatar{
         width: 180px;
         height: 180px;
         margin-top: -100px;
-        margin-left: 80px;
     }
 
     .icon{
@@ -76,6 +77,13 @@ h1 {
         font-size: 20px;
     }
     .logo{
-        width: 150px;
+        width: 120px;
+        height: 30px;
+    }
+    .contact-info{
+        margin: 10px;
+    }
+    .contact{
+        flex-direction: column;
     }
 }
