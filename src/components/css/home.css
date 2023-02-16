@@ -138,12 +138,7 @@ img:hover {
 
 
 @media screen and (max-width: 476px) {
-    .header{
-        width: 320px;
-    }
-    .sub-menu{
-        width: 320px;
-    }
+   
     .container{
         margin: 10px;
     }

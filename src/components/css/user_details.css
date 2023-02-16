@@ -57,9 +57,7 @@ h1 {
 
 
 @media screen and (max-width: 476px) {
-    .headers{
-        height: 200px;
-    }
+  
     .avatar{
         width: 180px;
         height: 180px;
