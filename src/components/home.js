@@ -83,7 +83,7 @@ export default function Home() {
                             filteredImage.map((item, index) => (
                                 <div className="grid-item" key={index}>
                                     <Link to={`/user/${item.login.uuid}`}>
-                                        <img src={item.picture.thumbnail} className="App-logo" alt="logo" />
+                                        <img src={item.picture.thumbnail}  alt="logo" />
                                     </Link>
                                 </div>
                             ))

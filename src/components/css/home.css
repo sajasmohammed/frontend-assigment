@@ -118,14 +118,17 @@ button:active {
 }
 
 .grid-container {
-    margin-top: 40px;
+    margin-top: 10px;
+    padding: 0px;
+    /* border: 1px solid coral; */
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    gap: 10px;   
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-gap: 10px;
 }
-.grid-container img {
-    width: 140px;
-    height: 140px;
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
 }
 
 img:hover {
@@ -173,18 +176,6 @@ img:hover {
     .outline-btn2{
         width: 70px;
         height: 30px;
-    }
-
-    .grid-container {
-        margin-top: 10px;
-        grid-template-columns: repeat(3, 1fr);
-        row-gap: 10px;
-        column-gap: 0px;
-    }
-
-    .grid-container img {
-        width: 100px;
-        height: 100px;
     }
 
 }
