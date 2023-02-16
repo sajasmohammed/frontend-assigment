@@ -9,7 +9,7 @@ function App() {
   const [image, setImage] = useState([]);
   const [isLoading, setLoading] = useState(true)
   const [countFaces, setCountFaces] = useState(0);
-  const [user, setUser] = useState(560);
+  const [user, setUser] = useState(10);
   const [filteredImage, setfilteredImage] = useState([]);
 
   useEffect(() => {
